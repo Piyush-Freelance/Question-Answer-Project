@@ -1,0 +1,6 @@
+{% for notification in notifications %}
+    <div class="notification">
+        <p>{{ notification.message }}</p>
+        <a href="{% url 'mark_notification_as_read' notification.id %}">Mark as read</a>
+    </div>
+{% endfor %}
